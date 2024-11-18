@@ -8,8 +8,9 @@
 # job parameters
 #SBATCH --output=/opt/users/gpel0001/cce3207/ssh/out/cce3207_slurm_%A_%a.out
 #SBATCH --error=/opt/users/gpel0001/cce3207/ssh/err/cce3207_slurm_%A_%a.err
-#SBATCH --job-name=cce3207_simpleCNN
+#SBATCH --job-name=cce3207_assignment
 #SBATCH --account=undergrad
+#SBATCH --reservation=cce3015
 # email user with progress
 #SBATCH --mail-user=graham.pellegrini.22@um.edu.mt
 #SBATCH --mail-type=all
@@ -33,3 +34,6 @@ NOTEBOOK_PATH="/opt/users/gpel0001/cce3207/Assignment/assignment.ipynb"
 jupyter nbconvert --execute --to notebook \
     --allow-errors --inplace \
     "$NOTEBOOK_PATH"
+
+# Indicate that the job has finished
+echo "Job finished successfully"
