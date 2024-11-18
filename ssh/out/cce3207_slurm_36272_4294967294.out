@@ -1,0 +1,33 @@
+Virtual environment found, activating
+Annotation
+file_list.mat
+Images
+README.txt
+test_data.mat
+test_list.mat
+train_data.mat
+train_list.mat
+/opt/nfs/shared/images/ImageNetDogs/Images/n02085620-Chihuahua:                      directory
+/opt/nfs/shared/images/ImageNetDogs/Images/n02085782-Japanese_spaniel:               directory
+/opt/nfs/shared/images/ImageNetDogs/Images/n02085936-Maltese_dog:                    directory
+/opt/nfs/shared/images/ImageNetDogs/Images/n02086079-Pekinese:                       directory
+/opt/nfs/shared/images/ImageNetDogs/Images/n02086240-Shih-Tzu:                       directory
+/opt/nfs/shared/images/ImageNetDogs/Images/n02085620-Chihuahua/n02085620_10074.jpg: JPEG image data, JFIF standard 1.01, aspect ratio, density 1x1, segment length 16, baseline, precision 8, 333x500, components 3
+20580
+120
+  Geometry: 375x500+0+0
+  Page geometry: 375x500+0+0
+  Format: JPEG (Joint Photographic Experts Group JFIF format)
+  Quality: 75
+  Geometry: 500x250+0+0
+  Page geometry: 500x250+0+0
+  Format: JPEG (Joint Photographic Experts Group JFIF format)
+  Quality: 75
+  Geometry: 375x500+0+0
+  Page geometry: 375x500+0+0
+  Format: JPEG (Joint Photographic Experts Group JFIF format)
+  Quality: 75
+  Geometry: 500x375+0+0
+  Page geometry: 500x375+0+0
+  Format: JPEG (Joint Photographic Experts Group JFIF format)
+  Quality: 75

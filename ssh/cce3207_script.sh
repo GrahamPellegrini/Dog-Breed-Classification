@@ -9,19 +9,27 @@
 #SBATCH --output=/opt/users/gpel0001/cce3207/ssh/out/cce3207_slurm_%A_%a.out
 #SBATCH --error=/opt/users/gpel0001/cce3207/ssh/err/cce3207_slurm_%A_%a.err
 #SBATCH --job-name=cce3207_simpleCNN
-#SBATCH --reservation=cce3207
 #SBATCH --account=undergrad
 # email user with progress
 #SBATCH --mail-user=graham.pellegrini.22@um.edu.mt
 #SBATCH --mail-type=all
-#
-VENV=/opt/users/gpel0001/cce3207/cce3207-venv
-if [ -d $VENV ]; then
-   echo Virtual environment found, activating
-   VENV+=/bin/activate
-   source "$VENV"
+
+# Define virtual environment activation path
+VENV_PATH="/opt/users/gpel0001/cce3207/cce3207-venv/bin/activate"
+
+# Activate virtual environment if it exists
+if [ -f "$VENV_PATH" ]; then
+    echo "Virtual environment found, activating"
+    source "$VENV_PATH"
 else
-   echo Virtual environment not found!
+    echo "Virtual environment not found!"
+    exit 1
 fi
 
-jupyter nbconvert --execute --to notebook --output "ipynb_test" --output-dir "/opt/users/gpel0001/cce3207" "/opt/users/gpel0001/cce3207/ipynb_test_clear.ipynb"
+# Define the path to the notebook you want to re-run
+NOTEBOOK_PATH="/opt/users/gpel0001/cce3207/Assignment/assignment.ipynb"
+
+# Re-run the notebook and save the output back to the same file
+jupyter nbconvert --execute --to notebook \
+    --allow-errors --inplace \
+    "$NOTEBOOK_PATH"
