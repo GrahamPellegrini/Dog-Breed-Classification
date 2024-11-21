@@ -10,7 +10,7 @@
 #SBATCH --error=/opt/users/gpel0001/cce3207/ssh/err/cce3207_slurm_%A_%a.err
 #SBATCH --job-name=cce3207_assignment
 #SBATCH --account=undergrad
-#SBATCH --reservation=cce3207
+##SBATCH --reservation
 # email user with progress
 #SBATCH --mail-user=graham.pellegrini.22@um.edu.mt
 #SBATCH --mail-type=all
