@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=2G
-#SBATCH --time=0-01:30:00
+#SBATCH --time=0-02:00:00
 # job parameters
 #SBATCH --output=/opt/users/gpel0001/cce3207/ssh/out/cce3207_slurm_%A_%a.out
 #SBATCH --error=/opt/users/gpel0001/cce3207/ssh/err/cce3207_slurm_%A_%a.err

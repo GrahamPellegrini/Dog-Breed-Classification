@@ -4,7 +4,7 @@
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem-per-cpu=2G
-#SBATCH --time=0-01:00:00
+#SBATCH --time=0-01:30:00
 # job parameters
 #SBATCH --output=/opt/users/gpel0001/cce3207/ssh/out/cce3207_slurm_%A_%a.out
 #SBATCH --error=/opt/users/gpel0001/cce3207/ssh/err/cce3207_slurm_%A_%a.err
@@ -28,9 +28,12 @@ else
 fi
 
 # Define the path to the notebook you want to re-run
-IN_NOTEBOOK_PATH="/opt/users/gpel0001/cce3207/Assignment/import_test.ipynb"
-OUT_NOTEBOOK_PATH="/opt/users/gpel0001/cce3207/Assignment/import_test_result.ipynb"
+NOTEBOOK_PATH="/opt/users/gpel0001/cce3207/Assignment/assignment.ipynb"
 
-jupyter nbconvert --execute --to notebook --output "$OUT_NOTEBOOK_PATH" "$IN_NOTEBOOK_PATH"
+# Re-run the notebook and save the output back to the same file
+jupyter nbconvert --execute --to notebook \
+    --allow-errors --inplace \
+    "$NOTEBOOK_PATH"
+
 # Indicate that the job has finished
 echo "Job finished successfully"
