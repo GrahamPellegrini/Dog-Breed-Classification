@@ -31,7 +31,7 @@ echo "Checking GPU visibility with nvidia-smi"
 nvidia-smi
 
 # Define the path to the Python script
-PYTHON_SCRIPT_PATH="/opt/users/gpel0001/cce3207/ssh/gpu_test.py"
+PYTHON_SCRIPT_PATH="/opt/users/gpel0001/cce3207/ssh/test/gpu_test.py"
 
 # Check if the Python script exists
 if [ -f "$PYTHON_SCRIPT_PATH" ]; then
