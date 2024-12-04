@@ -16,15 +16,6 @@
 #SBATCH --mail-user=graham.pellegrini.22@um.edu.mt
 #SBATCH --mail-type=all
 
-
-# Set CUDA environment variables
-export PATH=/usr/local/cuda-11.2/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64:$LD_LIBRARY_PATH
-
-# Check if GPU is visible
-echo "Checking GPU visibility with nvidia-smi"
-nvidia-smi
-
 # Define virtual environment activation path
 VENV_PATH="/opt/users/gpel0001/cce3207/cce3207-venv/bin/activate"
 
