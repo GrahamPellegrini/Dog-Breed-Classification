@@ -1,0 +1,9 @@
+numpy
+random
+Pillow
+matplotlib
+torch
+torchsummary
+torchvision
+tqdm
+xmltodict
