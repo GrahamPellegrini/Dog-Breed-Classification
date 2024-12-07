@@ -29,7 +29,7 @@ else
 fi
 
 # Define the path to the notebook you want to re-run
-NOTEBOOK_PATH="/opt/users/gpel0001/cce3207/Assignment/assignment.ipynb"
+NOTEBOOK_PATH="/opt/users/gpel0001/cce3207/Assignment/retry.ipynb"
 
 # Re-run the notebook and save the output back to the same file
 jupyter nbconvert --execute --to notebook \
