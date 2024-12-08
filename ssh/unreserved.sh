@@ -3,9 +3,9 @@
 #SBATCH --partition=teaching_gpu
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=1
-#SBATCH --mem-per-cpu=2G
-#SBATCH --time=0-02:00:00
+#SBATCH --cpus-per-task=2
+#SBATCH --mem-per-cpu=1G
+#SBATCH --time=0-04:00:00
 
 # job parameters
 #SBATCH --output=/opt/users/gpel0001/cce3207/ssh/out/cc3207_slurm_%A_%a.out
