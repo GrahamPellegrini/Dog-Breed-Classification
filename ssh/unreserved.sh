@@ -1,11 +1,13 @@
 #!/bin/bash
 # ALWAYS specify CPU and RAM resources needed as well as walltime
-#SBATCH --partition=teaching_gpu
+##SBATCH --partition=teaching_gpu
 #SBATCH --ntasks=1
 #SBATCH --gres=gpu:1
-#SBATCH --cpus-per-task=2
-#SBATCH --mem-per-cpu=1G
-#SBATCH --time=0-04:00:00
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=200M
+#SBATCH --time=0-06:00:00
+###SBATCH --reservation=cce3015
+
 
 # job parameters
 #SBATCH --output=/opt/users/gpel0001/cce3207/ssh/out/cc3207_slurm_%A_%a.out
