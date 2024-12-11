@@ -5,7 +5,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem-per-cpu=200M
-#SBATCH --time=0-06:00:00
+#SBATCH --time=0-10:00:00
 ###SBATCH --reservation=cce3015
 
 
