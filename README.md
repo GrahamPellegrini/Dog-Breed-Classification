@@ -94,7 +94,7 @@ git clone https://github.com/GrahamPellegrini/Dog-Breed-Classification.git
 ```
 /opt/nfs/shared/images/ImageNetDogs
 ```
-> Alternatively, update the notebook to point to a custom dataset path of your choice.
+> 📁 Alternatively, update the notebook to point to a custom dataset path of your choice.
 
 4. Run all notebook cells sequentially to train and evaluate models.
 
@@ -102,12 +102,20 @@ git clone https://github.com/GrahamPellegrini/Dog-Breed-Classification.git
 
 ## 📊 Results Snapshot
 
-| Model            | Accuracy | Top-5 Accuracy | Observations                    |
-|------------------|----------|----------------|---------------------------------|
-| ResNet18         | ~80%     | ~95%           | Fast convergence, good baseline |
-| EfficientNet-B0  | ~85%     | ~97%           | Better generalisation, slower training |
+The following summarizes the performance of all models tested throughout the project:
 
-> Full training logs and checkpoints are stored under `model/`.
+| Model             | Accuracy | Loss  | Observations                                              |
+|------------------|----------|-------|-----------------------------------------------------------|
+| Simple-CNN        | 5.63%    | 3.68  | Baseline implementation with minimal layers               |
+| Improved-CNN      | 12.41%   | 4.29  | Added depth, batch norm, and bottlenecking                |
+| Deep-CNN          | 42.98%   | 2.17  | Modular 5-layer CNN, stronger generalisation              |
+| VGG16-BN          | 54.27%   | 2.98  | Pretrained model, signs of overfitting                    |
+| VGG16-1 (Adam+Scheduler) | 70.18%   | 1.53  | Frozen conv layers, slower convergence                    |
+| VGG16-2 (SGD Optimizer)  | 79.43%   | 0.69  | Best model: stable training, minimal overfitting          |
+
+> 📌 Final deployment candidate: **VGG16-2** for its accuracy and stable validation trends.
+
+> 📁 Training logs and saved weights available under `model/` directory.
 
 ---
 
